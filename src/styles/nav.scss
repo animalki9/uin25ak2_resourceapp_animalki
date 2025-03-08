@@ -1,0 +1,25 @@
+.tabs ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.category-btn {
+    background: #2A324B;
+    border: none;
+    color: #E1E5EE;
+    font-size: 13px;
+    font-weight: bold;
+    padding: 17px 63px;
+    justify-content: center;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.category-btn.active {
+    background-color: #fff;
+    color: #2A324B;
+}
+

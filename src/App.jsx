@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Layout from "./components/Layout";
 import ResourceCard from "./components/ResourceCard";
 import PageTitle from "./components/PageTitle";
@@ -19,7 +19,9 @@ function App() {
   return (
     <Layout> {/* Bruker Layout-komponenten for å inkludere navigasjonsmenyen */}
       <Routes> {/* Definerer ulike ruter for applikasjonen */}
-        
+        {/* Redirect fra rotstien til /html */}
+        <Route path="/" element={<Navigate to="/html" replace />} />
+
         <Route path="/html" element={<CategoryPage category="html" />} /> {/* Viser HTML-ressurser */}
         <Route path="/css" element={<CategoryPage category="css" />} /> {/* Viser CSS-ressurser */}
         <Route path="/javascript" element={<CategoryPage category="javascript" />} /> {/* Viser JavaScript-ressurser */}
